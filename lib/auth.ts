@@ -8,13 +8,14 @@ export const authOptions: NextAuthOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
   ],
-
+  
   pages: {
     signIn: "/login", // custom login page
   },
 
   session: {
     strategy: "jwt",
+    maxAge: 60 * 60 * 24 * 7,
   },
 
   callbacks: {

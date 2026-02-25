@@ -7,8 +7,18 @@ export default function LoginPage() {
     <div>
       <h1>Login Page</h1>
 
-      <button onClick={() => signIn("google", { callbackUrl: "/dashboard" })}>
-        Sign in with Google
+      <button
+        onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+        className="google-btn"
+      >
+        <img
+          src="/google-color.svg"
+          alt="Google logo"
+          className="google-logo"
+          width={20}
+          height={20}
+        />
+        {/* <span style={{ marginLeft: 8 }}>Sign in with Google</span> */}
       </button>
     </div>
   );

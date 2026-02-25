@@ -24,9 +24,16 @@ export default function Home() {
             onClick={() =>
               signIn("google", { callbackUrl: "/dashboard" })
             }
-          >
-            Login with Google
+            className="flex items-center justify-center border border-gray-300 rounded-xl bg-white transition-none">
+          <img src="/google-color.svg" alt="Google Logo" width={50} className="w-2 h-8" />
           </button>
+          {/* <button
+  onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+  style={{ border: "none", background: "white", padding: 0, cursor: "pointer" }}
+>
+  <img src="/google.png" alt="Google Login" width={50} />
+</button> */}
+
         </>
       )}
 

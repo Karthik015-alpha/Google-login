@@ -24,3 +24,43 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Image background helper: ensures transparent images show white behind them */
+.img-bg-white {
+  background-color: #ffffff;
+  display: inline-block;
+}
+
+.avatar {
+  background-color: #ffffff;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+/* Google sign-in button: logo appears white by default, shows color on hover */
+.google-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: none; /* no other hover effects */
+}
+
+.google-btn:focus { outline: none; }
+
+.google-logo {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  /* make the colored svg appear white by default */
+  filter: brightness(0) invert(1);
+  transition: none; /* no animation, immediate swap */
+}
+
+.google-btn:hover .google-logo {
+  filter: none; /* show the original colored SVG on hover */
+}

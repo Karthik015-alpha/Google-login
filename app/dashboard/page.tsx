@@ -16,7 +16,13 @@ export default function Dashboard() {
       <p>Name: {session.user?.name}</p>
       <p>Email: {session.user?.email}</p>
 
-      <img src={session.user?.image || ""} width={100} />
+      <img
+        src={session.user?.image || ""}
+        width={100}
+        height={100}
+        className="img-bg-white avatar"
+        alt={session.user?.name || "user avatar"}
+      />
 
       <br />
 
